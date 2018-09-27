@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="icon.ico">
+    <link rel="icon" href="favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bienvenido a 5Takes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,7 +57,7 @@
 
 <body>
     <div>
-        <form method="POST" action="dashboard.php" onsubmit="return enviar();">
+        <form method="POST" action="validacion.php" onsubmit="return enviar();">
             <div class="section-header">
                     <img src="logo.png" id="logo" name="logo"/>
                 <h2>5Takes</h2>

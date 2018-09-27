@@ -12,11 +12,13 @@ img {
 
 .navbar-inverse{
     background-color: #A4A4A4;
-    border-color: #A4A4A4;
+    border-color: #2E2E2E;
+    font-size: 17px;
 }
 .navbar-inverse .navbar-nav>li>a{
     color:black;
 }
+<<<<<<< HEAD
 .lbl {
     text-align:right;
     color:red;
@@ -26,3 +28,24 @@ img {
 table{
     width: 100%; 
 }
+=======
+<<<<<<< HEAD
+.navbar-inverse .navbar-nav>li>a:hover{
+    color:#FFFFFF;
+    background-color: green; 
+}
+
+
+=======
+<<<<<<< HEAD
+.lbl {
+    text-align:right;
+    color:red;
+=======
+.navbar-inverse .navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color:#0B614B;
+>>>>>>> 749c2fdb43c57adc86580a91ba77b4dbf501c964
+}
+>>>>>>> 5233d9221671f347183ba49ae0ead0c664272fa4
+>>>>>>> 1e376e10071cbd85faaff6dc9948279f40dfe6c9
