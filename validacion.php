@@ -1,7 +1,7 @@
 <?php
     include "./conexion.php";
 
-    $database = $firebase -> getDatabase();
+    /*$database = $firebase -> getDatabase();
 
     $newPost = $database
     -> getReference('tbl_usuarios')
@@ -13,7 +13,12 @@
     $reference = $database->getReference('tbl_usuarios');
     $value = $reference ->getValue();
 
-    echo(json_encode($value));
+    echo(json_encode($value));*/
+        if(isset($_POST["user"]) && isset($_POST["password"])){
+            $user = $_POST["user"];
+            $clave = $_POST["password"];
 
-    //holo
+        $sql="SELECT * FROM tbl_usuarios WHERE usuEmail='{$user}' AND usuContraseña=AES_DECRYPT({'$clave}','FIVETAKES')";
+        $result 
+        }
 ?>
