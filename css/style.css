@@ -9,3 +9,11 @@ img {
     margin-left: 20px;
     padding: none;
 }
+
+.navbar-inverse{
+    background-color: #A4A4A4;
+    border-color: #A4A4A4;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color:black;
+}
