@@ -6,9 +6,12 @@
     $newPost = $database
     -> getReference('tbl_usuarios')
     -> push([
-        'usuID'=> 1,
-        'usuNombre' =>'Alan David Sanchez Ramos'
+        'usuID'=> 2,
+        'usuNombre' =>'Hector Palomino Vargas'
     ]);
 
-    echo "echo";
+    $reference = $database->getReference('tbl_usuarios');
+    $value = $reference ->getValue();
+
+    echo(json_encode($value));
 ?>
