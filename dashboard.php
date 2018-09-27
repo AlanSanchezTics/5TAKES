@@ -11,9 +11,13 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="jumbotron">
-<img src="logo.png" alt="Smiley face" width="64" height="64">
-  
+
+<img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal">
+<div class = "lbl">
+<label >Usuario: </label>
+  <label>Default</label>
+  <br>
+  <a href ="" >Cerrar Sesion</a>
 </div>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
