@@ -24,12 +24,15 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
         if ($reg = mysqli_fetch_array($result)) {
             switch ($reg["UsuEstatus"]) {
                 case 0:
-                    echo "USUARIO INACTIVO";
+                    echo "<script language='javascript'>";
+                    echo "window.location.href='index.php?INACTIVE=true'";
+                    echo "</script>";
                     break;
                 case 1:
                     echo "<script language='javascript'>";
                     echo "window.location.href='dashboard.php'";
                     echo "</script>";
+                    break;
                 default:
                         # code...
                     break;
