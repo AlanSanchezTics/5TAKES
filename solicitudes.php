@@ -26,8 +26,10 @@
         <td>John</td>
         <td>Doe</td>
         <td>john@example.com</td>
-        <td><span class="label label-warning">Pendiente</span><span class="label label-success">Revisado</span></td>
-        <td>mary@example.com</td>
+        <td>
+            <span class="label label-warning">Pendiente</span><span class="label label-success">Revisado</span><button type="button" class="btn btn-success">Revisar</button>
+        </td>
+        <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
       </tr>
       <tr>
         <td>Mary</td>

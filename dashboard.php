@@ -11,14 +11,19 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal">
-<div class = "lbl">
+<table>
+  <tr>
+    <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
+    <th><div class = "lbl">
 <label >Usuario: </label>
   <label>Default</label>
   <br>
   <a href ="" >Cerrar Sesion</a>
-</div>
+</div></th>
+  </tr>
+</table>
+
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">

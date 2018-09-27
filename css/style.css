@@ -18,22 +18,33 @@ img {
 .navbar-inverse .navbar-nav>li>a{
     color:black;
 }
-<<<<<<< HEAD
+
+
+
+.lbl {
+    text-align:right;
+    color:red;
+    margin-right: 20px;
+    font-size: 20px;
+}
+table{
+    width: 100%; 
+}
+
 .navbar-inverse .navbar-nav>li>a:hover{
     color:#FFFFFF;
     background-color: green; 
 }
 
 
-=======
-<<<<<<< HEAD
+
 .lbl {
     text-align:right;
     color:red;
-=======
-.navbar-inverse .navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    color: #fff;
-    background-color:#0B614B;
->>>>>>> 749c2fdb43c57adc86580a91ba77b4dbf501c964
 }
->>>>>>> 5233d9221671f347183ba49ae0ead0c664272fa4
+
+
+.btn{
+    margin: 15px;
+}
+
