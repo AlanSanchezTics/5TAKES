@@ -19,6 +19,17 @@ img {
     color:black;
 }
 <<<<<<< HEAD
+.lbl {
+    text-align:right;
+    color:red;
+    margin-right: 20px;
+    font-size: 20px;
+}
+table{
+    width: 100%; 
+}
+=======
+<<<<<<< HEAD
 .navbar-inverse .navbar-nav>li>a:hover{
     color:#FFFFFF;
     background-color: green; 
@@ -37,3 +48,4 @@ img {
 >>>>>>> 749c2fdb43c57adc86580a91ba77b4dbf501c964
 }
 >>>>>>> 5233d9221671f347183ba49ae0ead0c664272fa4
+>>>>>>> 1e376e10071cbd85faaff6dc9948279f40dfe6c9
