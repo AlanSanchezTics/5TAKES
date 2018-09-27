@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+/*error_reporting(E_ALL);
 
 ini_set('display_errors','i');
 
@@ -14,5 +14,7 @@ $apiKey = "<AIzaSyBoeoKmLzj5TCdtc6HWK-Sligz3beZAmJI>";
 $firebase = (new Factory)
     ->withServiceAccount($serviceAccount,$apiKey)
     ->withDatabaseUri("https://fivetakesbd.firebaseio.com/")
-    ->create();
+    ->create();*/
+    $conexion = new mysqli("192.168.52.21:8080","root","hector123","bd5takes");
+    $tildes = $conexion->query("SET NAMES 'utf8'");
 ?>
