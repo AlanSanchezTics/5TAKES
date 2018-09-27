@@ -1,6 +1,6 @@
 
 .jumbotron {
-    margin-bottom: 0px; 
+    margin-bottom: 0%; 
     background-color: #FFFFFF;
     padding: 0%;
 }
@@ -16,4 +16,8 @@ img {
 }
 .navbar-inverse .navbar-nav>li>a{
     color:black;
+}
+.lbl {
+    text-align:right;
+    color:red;
 }
