@@ -33,9 +33,6 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
                     echo "window.location.href='dashboard.php'";
                     echo "</script>";
                     break;
-                default:
-                        # code...
-                    break;
             }
         }
     }
