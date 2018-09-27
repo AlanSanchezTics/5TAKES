@@ -65,6 +65,11 @@
                 <table class="wow fadeInDown animated" align="center">
                     <tr>
                         <td>
+                            <?php
+                                if(isset($_GET["INACTIVE"])){
+                                    echo '<div class="alert alert-danger" role="alert">Tu cuenta ha sido desactivada.</div>';
+                                }
+                            ?>
                             <div class="form-group">
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-addon">
