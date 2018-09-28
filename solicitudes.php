@@ -79,6 +79,7 @@
                     echo '<span class="label label-warning">Sin realizar</span><button type="button" class="btn btn-success">Realizar</button>';
                   }
                   echo'</td>
+                  <td><button type="button" class="btn btn-success">Activar</button><button type="button" class="btn btn-danger">Denegar</button></td>
                 </tr>';
         }
       ?>
