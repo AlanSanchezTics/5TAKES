@@ -66,7 +66,7 @@
       <?php
       include 'conexion.php'; 
       
-      $idusuario=$_SESSION["usuID"];
+      $idusuario=$_GET["ref"];
       $sentencia="SELECT *FROM tbl_trabajosrealizados,tbl_dettrabajos,tbl_asignacionservicios,tbl_servicios where tbl_trabajosrealizados.dettrabid=tbl_dettrabajos.dettrabid and tbl_asignacionservicios.ProvId=tbl_servicios.ServId and  tbl_trabajosrealizados.colid={$idusuario};";
     $resultado = $conexion -> query($sentencia);
      while($filas = $resultado -> fetch_array()){               
