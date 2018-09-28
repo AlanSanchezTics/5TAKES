@@ -11,7 +11,7 @@ function NuevoFolio($folio)
         if ($user>0)
         {
             echo "<script language='javascript'>"; 
-            echo "alert('el cobro Ya Esta Facturado');";
+            echo "alert('El cobro Ya Habia Sido Facturado');";
             echo "window.location.href='vercobros.php';";
             echo "</script>";
         }else
