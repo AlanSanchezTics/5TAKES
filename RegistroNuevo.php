@@ -10,13 +10,13 @@
             echo "</script>";
         }else{
             switch ($usuTipo) {
-                case 2:
+                case "2":
                     $usuEstatus=2;
                     break;
-                case 3:
+                case "3":
                     $usuEstatus=2;
                 break;
-                case 4:
+                case "4":
                     $usuEstatus=1;
                 break;
             }
@@ -28,4 +28,5 @@
             }
         }
     }
+    Nuevafactura($_POST["email"],$_POST["nombre"],$_POST["APPaterno"],$_POST["APMaterno"],$_POST[""],$_POST["pswd"],$_POST["ciudad"],$_POST["tipo"]);
 ?>

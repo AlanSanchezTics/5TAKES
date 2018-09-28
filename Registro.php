@@ -55,11 +55,10 @@
     </div>
     <div class="form-group">
   <label for="sel1">Selecciona Tipo de Usuario:</label>
-  <select class="form-control" id="sel1">
-  <option> </option>
-    <option>Proveedor</option>
-    <option>Colaborador</option>
-    <option>Usuario</option>
+  <select class="form-control" name="tipo" id="sel1">
+    <option value="2">Proveedor</option>
+    <option value="3">Colaborador</option>
+    <option value="4">Usuario</option>
   </select>
 </div>
     <button type="submit" class="btn btn-primary">Comienza Ahora!!</button>
