@@ -90,7 +90,7 @@
                         </div>
                     </div>
         </td>
-        <td><a href="modDatos.php"><button type="button" class="btn btn-warning">Modificar</button></a><button type="button" class="btn btn-danger">Eliminar</button></td>
+        <td><a href="ModProvForm.php"><button type="button" class="btn btn-warning">Modificar</button></a><button type="button" class="btn btn-danger">Eliminar</button></td>
               </tr>';
     }
     ?>
