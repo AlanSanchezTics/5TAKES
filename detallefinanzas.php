@@ -42,7 +42,7 @@
 <div class="container">
   <?php
   include "conexion.php";
-  $sentencia="SELECT usuNombre FROM tbl_usuarios where usuid={$GET['ref']}";
+  $sentencia="SELECT usuNombre FROM tbl_usuarios where usuid={$_GET['ref']}";
     $resultado = $conexion -> query($sentencia);
      $filas = $resultado -> fetch_array();
      $nombre=$filas[0];         
