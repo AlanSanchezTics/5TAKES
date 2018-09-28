@@ -28,25 +28,25 @@ $reg = mysqli_fetch_array($result);
     </div>
     <form class="form-group" action="RegistroNuevo.php" method="POST">
     <div class="form-group">
-    <input value = "<?php echo ".$reg[4]." ?>"type="email" class="form-control" id="email" placeholder="Nuevo e_mail" name="email">
+    <input value = "<?php echo "$reg[4]" ?>"type="email" class="form-control" id="email" placeholder="Nuevo e_mail" name="email">
     </div>
     <div class="form-group">
-    <input value = "<?php echo ".$reg[1]." ?>"type="text" class="form-control" id="nombre" placeholder="Ingresa tu Nombre" name="Nombre">
+    <input value = "<?php echo "$reg[1]" ?>"type="text" class="form-control" id="nombre" placeholder="Ingresa tu Nombre" name="Nombre">
     </div>
     <div class="form-group">
-    <input value = "<?php echo ".$reg[2]." ?>"type="text" class="form-control" id="APPaterno" placeholder="Ingresa Apellido Paterno" name="APPaterno">
+    <input value = "<?php echo "$reg[2]" ?>"type="text" class="form-control" id="APPaterno" placeholder="Ingresa Apellido Paterno" name="APPaterno">
    </div>
    <div class="form-group">
-    <input value = "<?php echo ".$reg[3]." ?>"type="text" class="form-control" id="APMaterno" placeholder="Ingresa Apellido Materno" name="APMaterno">
+    <input value = "<?php echo "$reg[3]" ?>"type="text" class="form-control" id="APMaterno" placeholder="Ingresa Apellido Materno" name="APMaterno">
     </div>
     <div class="form-group">
-    <input value = "<?php echo ".$reg[5]." ?>"type="tel" class="form-control" id="telefono" placeholder="Actualiza tu Teléfono" name="Telefono">
+    <input value = "<?php echo "$reg[5]" ?>"type="tel" class="form-control" id="telefono" placeholder="Actualiza tu Teléfono" name="Telefono">
     </div>
     <div class="form-group">
-    <input value = "<?php echo ".$reg[7]." ?>"type="password" class="form-control" id="pwd" placeholder="Nueva Contraseña" name="pswd">
+    <input value = "<?php echo "$reg[7]" ?>"type="password" class="form-control" id="pwd" placeholder="Nueva Contraseña" name="pswd">
     </div>
     <div class="form-group">
-    <input value = "<?php echo ".$reg[6]." ?>"type="text" class="form-control" id="ciudad" placeholder="Ingresa la Ciudad" name="ciudad">
+    <input value = "<?php echo "$reg[6]" ?>"type="text" class="form-control" id="ciudad" placeholder="Ingresa la Ciudad" name="ciudad">
     </div>
     <a href="VerifModCol.php?ref=<?php echo $_GET['ref'];?>"><button type="submit" class="btn btn-primary">Actualizar</button></a>
   </form>
