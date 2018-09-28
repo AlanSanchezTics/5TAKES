@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Dashboard</title>
+  <title>Facturacion</title>
   <meta charset="utf-8">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,10 +37,23 @@
 </nav>
 <div class="container">
     <form action="buscarfolio.php" method="POST" enctype="multipart/form-data">
-<label>Ingrese Folio</label>
-<input type="text" id="folio" name="folio"></input>	
-<input type="submit" value="Buscar Folio"></input>
-</form>     
+<h2>Buscar Folio De Cobro</h2>
+  <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input name="folio" type="text" class="form-control"  placeholder="Search" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+    </div> <br><br>  
+    </form>  
+    <h3>Resultados de b&uacute;squeda</h3>	
+
+    
 </div>
 </body>
 </html>
