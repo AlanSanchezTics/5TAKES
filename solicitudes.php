@@ -13,13 +13,14 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 <table>
   <tr>
     <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
     <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
   <br>
-  <a href ="" >Cerrar Sesion</a>
+  <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
   </tr>
 </table>
@@ -76,7 +77,7 @@
                   if(mysqli_num_rows($conexion->query($sql))>0){
                     echo '<span class="label label-success">Realizado</span>';
                   }else{
-                    echo '<span class="label label-warning">Sin realizar</span><button type="button" class="btn btn-success">Realizar</button>';
+                    echo '<span class="label label-warning">Sin realizar</span><a href="Quiz.php?ref='.$reg[0].'"><button type="button" class="btn btn-success">Realizar</button></a>';
                   }
                   echo'</td>
                   <td><a href="altaUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-success">Activar</button></a><a href="inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Denegar</button></a></td>

@@ -20,7 +20,7 @@
     </div>
     <div class="col" style="text-align:right">
     <div class="lbl">   
-            <a href ="#" >Cerrar Sesion</a>
+            <a href ="logout.php" >Cerrar Sesion</a>
     </div>
     </div>
 </div>
@@ -53,7 +53,7 @@
     <div class="input-group">
     <div class="custom-file">
     <form action="subirdocs2.php" method="POST" enctype="multipart/form-data" name="form1">
-    <input type="file" class="custom-file-input" id="inputGroupFile04">
+    <input type="file" class="custom-file-input" id="inputGroupFile04" name="doc">
     <label class="custom-file-label" for="inputGroupFile04">Carta De Antecedentes No Penales</label>
     </div>
     </div>
