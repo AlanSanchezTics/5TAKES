@@ -60,7 +60,7 @@
             <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
             <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
         </td>
-        <td><button type="button" class="btn btn-success">Modificar</button><button type="button" class="btn btn-warning">Eliminar</button></td>
+        <td><button type="button" class="btn btn-warning">Modificar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
       </tr>
       <tr>
         <td>2</td>
@@ -72,7 +72,7 @@
             <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
             <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
         </td>
-        <td><button type="button" class="btn btn-success">Modificar</button><button type="button" class="btn btn-warning">Eliminar</button></td>
+        <td><button type="button" class="btn btn-warning">Modificar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
       </tr>
       
     </tbody>

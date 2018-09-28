@@ -38,7 +38,50 @@
 </nav>
 <div class="container">
    
-    <h2>Banco de preguntas</h2>
+    <table>
+    <tr>
+      <th>
+        <h2>Banco de preguntas</h2>
+      </th>
+      <th style="text-align:right">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalAgregarPregunta">
+        Agregar
+        </button>
+      </th>
+    </tr>
+  </table>
+
+  <!-- Modal -->
+    <div class="modal fade" id="ModalAgregarPregunta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="ModalAgregarPregunta">Agrega una Pregunta</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+                
+            <input type="text" id="pregunta" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <a href="http://localhost:8080/5TAKES/gestionpreguntas.php">
+                <button type="button" class="btn btn-success">Guardar</button>
+            </a>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Focus al inpud del modal -->
+    <script>
+        $('#ModalAgregarPregunta').on('shown.bs.modal', function () {
+            $('#pregunta').trigger('focus')
+        })
+    </script>
 
   <table class="table table-hover table-striped">
     <thead>
