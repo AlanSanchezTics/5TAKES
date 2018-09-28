@@ -26,9 +26,6 @@
 <label>Fecha</label>
 <input type="date" name="fecha"></input>
 <br>
-<label>IVA</label>
-<input type="text" name="iva"></input>
-<br>
 <br>
 <input type="SUBMIT" value="Enviar"></input>
 

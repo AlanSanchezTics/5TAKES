@@ -2,15 +2,14 @@
 include '../conexion.php';
 session_start();
 $_POST['tid']=$_SESSION['tid'];
-Nuevafactura($_POST['rfc'], $_POST['monto'], $_POST['rsocial'],$_POST['tpago'],$_POST['direccion'],$_POST['ciudad'],$_POST['fecha'],$_POST['iva'],$_POST['tid']);
+Nuevafactura($_POST['rfc'], $_POST['monto'], $_POST['rsocial'],$_POST['tpago'],$_POST['direccion'],$_POST['ciudad'],$_POST['fecha'],$_POST['tid']);
 
-function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$iva,$tid)
+function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$tid)
 {
 	 include '../conexion.php';
-	 $cd=$rfc.$monto.$rsocial.$tpago.$direccion.$ciudad.$fecha.$iva.$tid;
+	 $cd=$rfc.$monto.$rsocial.$tpago.$direccion.$ciudad.$fecha.$tid;
 	 
-	 $cd=$cd.strrev($cd).$cd;
-	 
+	 $cd=$cd.strrev($cd).$cd;	 
 	 for ($i = 0; $i <=strlen($cd)-1 ; $i++) {
     if ($cd{$i}=='a'||$cd{$i}=='3') {
     	$cd{$i}='X';
@@ -27,14 +26,12 @@ function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$iva
     if ($cd{$i}=='-'||$cd{$i}=='9') {
     	$cd{$i}='"';
     }
-	}
-	var_dump($cd);
-
-
-
-	 $sellodigital='22fggfgfg';
-	 $sentencia="INSERT INTO tbl_facturas(rfc,monto,razonsocial,tid,tipopago,direccion,ciudad,fecha,sellodigital,iva,facturaexiste) VALUES ('".$rfc."',".$monto.",'".$rsocial."',".$tid.",'".$tpago."','".$direccion."','".$ciudad."','".$fecha."','".$sellodigital."',".$iva.",1)";
-                    if ($conexion->query($sentencia) === TRUE) {
+	}	 
+	$iva=($monto)-($monto*0.84);	
+	$sentencia="INSERT INTO tbl_facturacion(rfc,monto,razonsocial,tid,tipopago,direccion,ciudad,fecha,sellodigital,iva,facturaexiste) VALUES ('".$rfc."',".$monto.",'".$rsocial."',".$tid.",'".$tpago."','".$direccion."','".$ciudad."','".$fecha."','".$cd."',".$iva.",1)";
+	var_dump($sentencia);
+	die();
+	                 if ($conexion->query($sentencia) === TRUE) {
                     	echo "<script language='javascript'>"; 
                             echo "alert('Factura Realizada Corectamente');";
                             echo "</script>"; 
