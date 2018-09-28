@@ -66,10 +66,6 @@
             <label>¿</label>
             <input type="text" id="pregunta" style="width:500px;">
             <label>?</label>
-            <style type="text/css">
-            .pregunta {
-                weight: 800px; }
-            </style>
 
         </div>
         <div class="modal-footer">
