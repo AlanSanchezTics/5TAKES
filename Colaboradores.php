@@ -17,10 +17,9 @@
   <tr>
     <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
-    <a href="#"><?php session_start();
-                echo $_SESSION["usuNombre"]; ?></a>
+    <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
   <br>
-  <a href ="" >Cerrar Sesion</a>
+  <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
   </tr>
 </table>

@@ -23,7 +23,7 @@
     <a href="#"><?php session_start();
                 echo $_SESSION["usuNombre"]; ?></a>
   <br>
-  <a href ="" >Cerrar Sesion</a>
+  <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
   </tr>
 </table>
@@ -40,9 +40,15 @@
   </div>
 </nav>
 <div class="container">
+  <?php
+  include "conexion.php";
+  $sentencia="SELECT usuNombre FROM tbl_usuarios where usuid={$_GET['ref']}";
+    $resultado = $conexion -> query($sentencia);
+     $filas = $resultado -> fetch_array();
+     $nombre=$filas[0];         
+  ?>
   <h2>Detalles de Finanzas</h2>
-  <h3>Pedro Meza</h3>
-  
+  <h3><?php echo $nombre ?></h3>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -56,25 +62,25 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Cableado</td>
-        <td>03/09/2018</td>
-        <td>Trabajo muy completo y eficiente.</td>
-        <td>$7,500.00</td>
-        <td>$6,000.00</td>
-        <td>$1,500.00</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Cableado</td>
-        <td>03/09/2018</td>
-        <td>Trabajo muy completo y eficiente.</td>
-        <td>$7,500.00</td>
-        <td>$6,000.00</td>
-        <td>$1,500.00</td>
-    </tr>
+      <?php
+      include 'conexion.php'; 
       
+      $idusuario=$_GET["ref"];
+      $sentencia="SELECT *FROM tbl_trabajosrealizados,tbl_dettrabajos,tbl_asignacionservicios,tbl_servicios where tbl_trabajosrealizados.dettrabid=tbl_dettrabajos.dettrabid and tbl_asignacionservicios.ProvId=tbl_servicios.ServId and  tbl_trabajosrealizados.colid={$idusuario};";
+    $resultado = $conexion -> query($sentencia);
+     while($filas = $resultado -> fetch_array()){               
+      echo "<tr>";
+          echo "<td>"; echo $filas[0]; echo "</td>";
+          echo "<td>"; echo $filas[16]; echo "</td>";
+          echo "<td>"; echo $filas[7]; echo "</td>";
+          echo "<td>"; echo $filas[9]; echo "</td>";
+          echo "<td>$"; echo $filas[3]; echo "</td>";
+          echo "<td>$"; echo $comision=$filas[3]-($filas[3]*0.70); echo "</td>";
+          echo "<td>$"; echo $ganancia=($filas[3]/1.3); echo "</td>";
+      echo "</tr>";     
+      }
+
+      ?>
     </tbody>
   </table>
 </div>

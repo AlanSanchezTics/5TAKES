@@ -16,7 +16,8 @@
   <tr>
     <th><img src="../logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
-    <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
+    <a href="#"><?php session_start();
+                echo $_SESSION["usuNombre"]; ?></a>
   <br>
   <a href ="" >Cerrar Sesion</a>
 </div></th>
@@ -54,60 +55,41 @@
         <th>Nombre</th>
         <th>Correo</th>
         <th>Telefono</th>
-        <th>Direccion</th>
+        <th>Ciudad</th>
         <th>Status</th>
         <th>Opciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>John Perez</td>
-        <td>john@example.com</td>
-        <td>3221753228</td>
-        <td>Calle Paquito 5 Av.Arboleda</td>
-        <td>
-            <span class="label label-warning">Inactivo</span>
-            <span class="label label-success">Activo</span>
-        </td>
-        <td>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-danger">Desactivar</button>
-        </td>
-      </tr>
-      
-      <tr>
-        <td>2</td>
-        <td>John Perez</td>
-        <td>john@example.com</td>
-        <td>3221753228</td>
-        <td>Calle Paquito 5 Av.Arboleda</td>
-        <td>
-            <span class="label label-warning">Inactivo</span>
-            <span class="label label-success">Activo</span>
-        </td>
-        <td>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-danger">Desactivar</button>
-        </td>
-      </tr>
-      
-      <tr>
-        <td>3</td>
-        <td>John Perez</td>
-        <td>john@example.com</td>
-        <td>3221753228</td>
-        <td>Calle Paquito 5 Av.Arboleda</td>
-        <td>
-            <span class="label label-warning">Inactivo</span>
-            <span class="label label-success">Activo</span>
-        </td>
-        <td>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-danger">Desactivar</button>
-        </td>
-      </tr>
+      <?php
+      include "../conexion.php";
 
+      $sql = "SELECT * FROM tbl_usuarios where UsuTipo=4";
+      $result = mysqli_query($conexion, $sql);
+      while ($reg = mysqli_fetch_array($result)) {
+        echo '<tr>
+                <th>' . $reg[0] . '</th>
+                <td>' . $reg[1] . ' ' . $reg[2] . ' ' . $reg[3] . '</td>
+                <td>' . $reg[4] . '</td>
+                <td>' . $reg[5] . '</td>
+                <td>' . $reg[6] . '</td>
+                <td>';
+        switch ($reg[8]) {
+          case 0:
+            echo '<span class="label label-danger">Inactivo</span>';
+            break;
+          case 1:
+            echo '<span class="label label-success">Activo</span>';
+            break;
+        }
+        echo '</td>
+                <td>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-danger">Desactivar</button>
+        </td>
+              </tr>';
+      }
+      ?>
     </tbody>
   </table>
 </div>

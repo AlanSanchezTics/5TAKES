@@ -20,7 +20,7 @@
     </div>
     <div class="col" style="text-align:right">
     <div class="lbl">   
-            <a href ="#" >Cerrar Sesion</a>
+            <a href ="logout.php" >Cerrar Sesion</a>
     </div>
     </div>
 </div>
