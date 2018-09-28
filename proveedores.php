@@ -1,7 +1,7 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>solicitudes</title>
+  <title>Proveedores</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,7 +17,8 @@
   <tr>
     <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
-    <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
+<label >Usuario: </label>
+  <label>Default</label>
   <br>
   <a href ="" >Cerrar Sesion</a>
 </div></th>
@@ -26,9 +27,9 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><a href="#" class="selected">Solicitudes</a></li>
-      <li><a href="#">Finanzas</a></li>
-      <li><a href="#">Proveedores</a></li>
+      <li><a href="solicitudes.php">Solicitudes</a></li>
+      <li><a href="#" >Finanzas</a></li>
+      <li><a href="#" class="selected">Proveedores</a></li>
       <li><a href="#">Colaboradores</a></li>
       <li><a href="#">Clientes</a></li>
       <li><a href="#">Facturaci&oacute;n</a></li>
@@ -44,8 +45,9 @@
         <th>Nombre</th>
         <th>Correo</th>
         <th>Telefono</th>
+        <th>Ciudad</th>
         <th>Documentos</th>
-        <th>Examen</th>
+        <t></
       </tr>
     </thead>
     <tbody>

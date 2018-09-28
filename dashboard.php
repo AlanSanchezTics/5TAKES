@@ -15,8 +15,7 @@
   <tr>
     <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
-<label >Usuario: </label>
-  <label>Default</label>
+  <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
   <br>
   <a href ="" >Cerrar Sesion</a>
 </div></th>
