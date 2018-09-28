@@ -10,11 +10,25 @@ function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$iva
 	 $cd=$rfc.$monto.$rsocial.$tpago.$direccion.$ciudad.$fecha.$iva.$tid;
 	 
 	 $cd=$cd.strrev($cd).$cd;
-
-	 var_dump($cd);
-	 for ($i = 1; $i <=strlen($cd) ; $i++) {
-    echo(charAt($cd, $i));
+	 
+	 for ($i = 0; $i <=strlen($cd)-1 ; $i++) {
+    if ($cd{$i}=='a'||$cd{$i}=='3') {
+    	$cd{$i}='X';
+    }
+    if ($cd{$i}=='b'||$cd{$i}=='4') {
+    	$cd{$i}='?';
+    }
+    if ($cd{$i}=='c'||$cd{$i}=='5') {
+    	$cd{$i}='%';
+    }
+    if ($cd{$i}=='d'||$cd{$i}=='6') {
+    	$cd{$i}='-';
+    }
+    if ($cd{$i}=='-'||$cd{$i}=='9') {
+    	$cd{$i}='"';
+    }
 	}
+	var_dump($cd);
 
 
 
