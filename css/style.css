@@ -21,7 +21,8 @@ img {
 
 .lbl {
     text-align:right;
-    color:red;
+    color:blue;
+    font-weight: 300;
     margin-right: 20px;
     font-size: 20px;
 }
@@ -33,10 +34,7 @@ table{
     color:#FFFFFF; 
     background-color: green; 
 }
-.lbl {
-    text-align:right;
-    color:red;
-}
+
 .btn, .btn-success{
   margin: 0px;
   padding: 2px;
