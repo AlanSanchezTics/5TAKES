@@ -1,8 +1,9 @@
 <?php
 include 'conexion.php';
 session_start();
-$_POST['id_usuario']=$_SESSION["usuID"];
-NuevoDoc($_FILES['doc'],$_POST['id_usuario']);
+$id_usuario=$_SESSION["usuID"];
+
+NuevoDoc($_FILES['doc'],$id_usuario);
 
 function NuevoDoc($docn,$usuid)
 {
@@ -17,10 +18,13 @@ if ($_FILES['doc']['type']=="image/jpeg" or $_FILES['doc']['type']=="image/png" 
                         move_uploaded_file($_FILES['imagen']['tmp_name'],$ruta);
                                    }else
                                    {
-                                    $nombreimagen=null;
+                                    $rutadoc=null;
                                    }
 
-      $sentencia="INSERT INTO tbl_alumnos(id_alumno,nombre,a_paterno,a_materno,grado,tel,email,nivel,fecha_ingreso,fecha_egreso,id_usuario,imagen,existe) VALUES ('".$no_control."','".$nombre."','".$a_paterno."','".$a_materno."','".$grado."','".$telefono."','".$email."','".$nivel."','{$fecha_ingreso}','{$fecha_egreso}',".$filas[0].",'".$nombreimagen."',1)";
+      $sentencia="INSERT INTO tbl_documentos(usuid,doctipo,doclink,docvigencia,docrevisado,docstatus) VALUES (".$usuid.",'Carta De Antecedentes No penales','".$rutadoc."','".$date("d-m-Y")."',0,0)";
+      var_dump($sentencia);
+      die();
+
        if ($conexion->query($sentencia) === TRUE ) {
        	echo "<script language='javascript'>"; 
         echo "alert('Archivo Subido Correctamente');";
