@@ -13,6 +13,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 <table>
   <tr>
     <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
