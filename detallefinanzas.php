@@ -40,16 +40,15 @@
   </div>
 </nav>
 <div class="container">
-  <h2>Detalles de Finanzas</h2>
-  <h3>Pedro Meza</h3>
   <?php
   include "conexion.php";
-
-
-
+  $sentencia="SELECT usuNombre FROM tbl_usuarios where usuid={$GET['ref']}";
+    $resultado = $conexion -> query($sentencia);
+     $filas = $resultado -> fetch_array();
+     $nombre=$filas[0];         
   ?>
-
-
+  <h2>Detalles de Finanzas</h2>
+  <h3><?php echo $nombre ?></h3>
   <table class="table table-striped">
     <thead>
       <tr>
