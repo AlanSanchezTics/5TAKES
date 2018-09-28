@@ -29,8 +29,8 @@ table{
     width: 100%; 
 }
 
-.navbar-inverse .navbar-nav>li>a:hover{
-    color:#FFFFFF;
+.navbar-inverse .navbar-nav>li>a:hover, a.selected{
+    color:#FFFFFF; 
     background-color: green; 
 }
 .lbl {
@@ -46,5 +46,3 @@ table{
     font-size: 75%;
     font-weight: 700;
 }
-
-
