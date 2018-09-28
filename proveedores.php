@@ -26,12 +26,12 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><a href="../Solicitudes/solicitudes.php">Solicitudes</a></li>
-      <li><a href="../finanzas/finanzas.php">Finanzas</a></li>
+      <li><a href="solicitudes.php">Solicitudes</a></li>
+      <li><a href="finanzas.php">Finanzas</a></li>
       <li><a href="proveedores.php" class="selected">Proveedores</a></li>
-      <li><a href="../Colaboradores/Colaboradores.php">Colaboradores</a></li>
-      <li><a href="../Clientes/encuestas.php">Clientes</a></li>
-      <li><a href="../facturacion/vercobros.php">Facturaci&oacute;n</a></li>
+      <li><a href="Colaboradores.php">Colaboradores</a></li>
+      <li><a href="Clientes/encuestas.php">Clientes</a></li>
+      <li><a href="facturacion/vercobros.php">Facturaci&oacute;n</a></li>
     </ul>
   </div>
 </nav>
@@ -52,7 +52,7 @@
     </thead>
     <tbody>
     <?php
-      include "../conexion.php";
+      include "conexion.php";
       $sql = "SELECT tbl_usuarios.UsuId, tbl_usuarios.UsuNombre, tbl_usuarios.UsuApaterno, tbl_usuarios.UsuAmaterno, tbl_usuarios.UsuEmail, tbl_usuarios.UsuTelefono, tbl_usuarios.usuCiudad, tbl_servicios.Descripcion FROM tbl_usuarios,tbl_servicios, tbl_asignacionservicios WHERE tbl_asignacionservicios.ProvId = tbl_usuarios.UsuId AND tbl_asignacionservicios.ServId = tbl_servicios.ServId AND tbl_usuarios.UsuEstatus=1";
       $result = mysqli_query($conexion, $sql);
     while ($reg = mysqli_fetch_array($result)) {

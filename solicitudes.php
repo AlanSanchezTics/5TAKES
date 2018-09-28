@@ -27,11 +27,11 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li><a href="solicitudes.php" class="selected">Solicitudes</a></li>
-      <li><a href="../Finanzas/finanzas.php">Finanzas</a></li>
-      <li><a href="../Proveedores/proveedores.php">Proveedores</a></li>
-      <li><a href="../Colaboradores/Colaboradores.php">Colaboradores</a></li>
-      <li><a href="../Clientes/encuestas.php">Clientes</a></li>
-      <li><a href="../facturacion/vercobros.php">Facturaci&oacute;n</a></li>
+      <li><a href="finanzas.php">Finanzas</a></li>
+      <li><a href="proveedores.php">Proveedores</a></li>
+      <li><a href="Colaboradores.php">Colaboradores</a></li>
+      <li><a href="Clientes/encuestas.php">Clientes</a></li>
+      <li><a href="facturacion/vercobros.php">Facturaci&oacute;n</a></li>
     </ul>
   </div>
 </nav>
@@ -51,7 +51,7 @@
     </thead>
     <tbody>
       <?php
-        include "../conexion.php";
+        include "conexion.php";
         $sql = "SELECT tbl_usuarios.UsuId, tbl_usuarios.UsuNombre, tbl_usuarios.UsuApaterno, tbl_usuarios.UsuAmaterno, tbl_usuarios.UsuEmail,tbl_usuarios.UsuTelefono,tbl_usuarios.UsuTipo FROM tbl_usuarios WHERE tbl_usuarios.UsuEstatus=2";
         $result = mysqli_query($conexion,$sql);
         while ($reg = mysqli_fetch_array($result)) {
@@ -79,7 +79,7 @@
                     echo '<span class="label label-warning">Sin realizar</span><button type="button" class="btn btn-success">Realizar</button>';
                   }
                   echo'</td>
-                  <td><a href="../altaUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-success">Activar</button></a><a href="../inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Denegar</button></a></td>
+                  <td><a href="altaUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-success">Activar</button></a><a href="inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Denegar</button></a></td>
                 </tr>';
         }
       ?>

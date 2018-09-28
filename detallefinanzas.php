@@ -30,12 +30,12 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-    <li><a href="../Solicitudes/solicitudes.php">Solicitudes</a></li>
+    <li><a href="solicitudes.php">Solicitudes</a></li>
       <li><a href="finanzas.php" class="selected">Finanzas</a></li>
-      <li><a href="../Proveedores/proveedores.php">Proveedores</a></li>
-      <li><a href="../Colaboradores/Colaboradores.php">Colaboradores</a></li>
-      <li><a href="../Clientes/encuestas.php">Clientes</a></li>
-      <li><a href="../facturacion/vercobros.php">Facturaci&oacute;n</a></li>
+      <li><a href="proveedores.php">Proveedores</a></li>
+      <li><a href="Colaboradores.php">Colaboradores</a></li>
+      <li><a href="Clientes/encuestas.php">Clientes</a></li>
+      <li><a href="facturacion/vercobros.php">Facturaci&oacute;n</a></li>
     </ul>
   </div>
 </nav>
