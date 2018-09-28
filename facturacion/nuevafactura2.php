@@ -29,11 +29,11 @@ function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$tid
 	}	 
 	$iva=($monto)-($monto*0.84);	
 	$sentencia="INSERT INTO tbl_facturacion(rfc,monto,razonsocial,tid,tipopago,direccion,ciudad,fecha,sellodigital,iva,facturaexiste) VALUES ('".$rfc."',".$monto.",'".$rsocial."',".$tid.",'".$tpago."','".$direccion."','".$ciudad."','".$fecha."','".$cd."',".$iva.",1)";
-	var_dump($sentencia);
-	die();
+
 	                 if ($conexion->query($sentencia) === TRUE) {
                     	echo "<script language='javascript'>"; 
                             echo "alert('Factura Realizada Corectamente');";
+                            echo "window.location.href='buscarfolio.php';";
                             echo "</script>"; 
 
 
@@ -41,6 +41,7 @@ function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$tid
 
                     		echo "<script language='javascript'>"; 
                             echo "alert('Factura No Realizada');";
+                            echo "window.location.href='buscarfolio.php';";
                             echo "</script>"; 
                     }
 }
