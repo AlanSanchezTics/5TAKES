@@ -43,7 +43,7 @@
       <h2>Encuestas de Satisfacción</h2>
       </th>
       <th style="text-align:right">
-       <a href="#" class="badge badge-info">Generador de Banco de Preguntas</a>
+       <a href="gestionpreguntas.php" class="badge badge-info">Generador de Banco de Preguntas</a>
       </th>
     </tr>
   </table>

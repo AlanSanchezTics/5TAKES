@@ -44,4 +44,9 @@ table{
     font-size: 75%;
     font-weight: 700;
 }
+.col-sm-6,.scol-sm-offset-3,.imaginary_container, .input-group,.stylish-input-group{
+    float:left; 
+    padding: 0px;
+    margin: 0px;
+}
 

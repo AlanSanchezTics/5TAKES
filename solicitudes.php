@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>solicitudes</title>
@@ -31,7 +31,7 @@
       <li><a href="proveedores.php">Proveedores</a></li>
       <li><a href="Colaboradores.php">Colaboradores</a></li>
       <li><a href="encuestas.php">Clientes</a></li>
-      <li><a href="#">Facturaci&oacute;n</a></li>
+      <li><a href="facturacion/vercobros.php">Facturaci&oacute;n</a></li>
     </ul>
   </div>
 </nav>
