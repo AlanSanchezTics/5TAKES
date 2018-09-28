@@ -6,7 +6,7 @@ session_start();
 
 
     $idexam = $_GET['ref'];
-    $sql = "UPDATE tbl_examenes SET examCalif=10, examEstatus=1 WHERE examID = '{$indexam}'";
+    $sql = "INSERT INTO tbl_examenes (usuID,examCalif,examEstatus) VALUES ('{$indexam}',10,1)";
 
     if (mysqli_query($conexion, $sql) === TRUE) {
         echo "<script language='javascript'>";
@@ -14,7 +14,7 @@ session_start();
         echo "</script>";
     }else{
         echo "<script language='javascript'>";
-        echo "alert('Error al actualizar')";
+        echo "alert('Error al Guardar')";
         echo "window.location.href='solicitudes.php";
         echo "</script>";
     }
