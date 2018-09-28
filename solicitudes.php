@@ -79,7 +79,7 @@
                     echo '<span class="label label-warning">Sin realizar</span><button type="button" class="btn btn-success">Realizar</button>';
                   }
                   echo'</td>
-                  <td><button type="button" class="btn btn-success">Activar</button><button type="button" class="btn btn-danger">Denegar</button></td>
+                  <td><a href="altaUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-success">Activar</button></a><a href="inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Denegar</button></a></td>
                 </tr>';
         }
       ?>

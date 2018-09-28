@@ -66,10 +66,30 @@
         $sql="SELECT * FROM tbl_documentos WHERE usuId={$reg[0]}";
         $result2 = mysqli_query($conexion,$sql);
         while($row = mysqli_fetch_array($result2)){
-          echo '<a href="">'.$row[2].'</a><p>Vigencia al: '.$row[4].'</p>';
+          echo '<a data-toggle="modal" data-target="#myModal">'.$row[2].'</a><p>Vigencia al: '.$row[4].'</p>';
         }
-        echo '</td>
-        <td><a href="modDatos.php"><button type="button" class="btn btn-warning">Modificar</button></a><button type="button" class="btn btn-danger">Eliminar</button></td>
+        echo '
+        <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                        
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            
+                            </div>
+                            <div class="modal-body">
+                            <center><img src="'.$row[3].'" width="90%" ></center>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+        </td>
+        <td><a href="modDatos.php?usuID='.$reg[0].'"><button type="button" class="btn btn-warning">Modificar</button></a><a href="inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
               </tr>';
     }
     ?>
