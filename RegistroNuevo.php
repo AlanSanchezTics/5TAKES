@@ -1,9 +1,8 @@
 <?php
     session_start();
-    include "conexion.php";
-
     function NuevoUsuario($usuEmail,$usuNombre,$usuApaterno,$usuAmaterno,$usuTelefono,$usuClave,$usuCiudad,$usuTipo)
     {
+        include "conexion.php";
         $sql = "SELECT usuID FROM tbl_usuarios where usuEmail='{$usuEmail}'";
         if(mysqli_num_rows($conexion -> query($sql)) > 0){
             echo "<script language='javascript'>";
