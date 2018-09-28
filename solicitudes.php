@@ -26,7 +26,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><a href="#">Solicitudes</a></li>
+      <li><a href="#" class="selected">Solicitudes</a></li>
       <li><a href="#">Finanzas</a></li>
       <li><a href="#">Proveedores</a></li>
       <li><a href="#">Colaboradores</a></li>
