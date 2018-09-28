@@ -14,7 +14,7 @@ $sentencia="SELECT *FROM tbl_trabajosrealizados WHERE trabid=".$folio." and trab
         		if ($user>0)
         		{
             		echo "<script language='javascript'>"; 
-            		echo "alert('El cobro Ya Habia Sido Facturado');";
+            		echo "alert('El cobro Ya Ha Sido Facturado');";
             		echo "window.location.href='vercobros.php';";
             		echo "</script>";
         		}else
