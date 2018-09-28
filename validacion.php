@@ -35,6 +35,10 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
                     break;
             }
         }
+    } else {
+        echo "<script language='javascript'>";
+        echo "window.location.href='index.php?wrongAccess=true'";
+        echo "</script>";
     }
 }
 ?>

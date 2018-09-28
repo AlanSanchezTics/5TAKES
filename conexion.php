@@ -15,6 +15,6 @@ $firebase = (new Factory)
     ->withServiceAccount($serviceAccount,$apiKey)
     ->withDatabaseUri("https://fivetakesbd.firebaseio.com/")
     ->create();*/
-    $conexion = new mysqli('192.168.52.194:3306','SA','123','bd5takes');
+    $conexion = new mysqli('192.168.52.163:3306','SA','123','bd5takes');
     $tildes = $conexion->query("SET NAMES 'utf8'");
 ?>

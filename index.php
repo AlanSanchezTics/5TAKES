@@ -68,6 +68,8 @@
                             <?php
                                 if(isset($_GET["INACTIVE"])){
                                     echo '<div class="alert alert-danger" role="alert">Tu cuenta ha sido desactivada.</div>';
+                                }else if(isset($_GET["wrongAccess"])){
+                                    echo '<div class="alert alert-danger" role="alert">Datos de acceso incorrectos.</div>';
                                 }
                             ?>
                             <div class="form-group">
