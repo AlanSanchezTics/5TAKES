@@ -33,7 +33,7 @@ function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$tid
 	                 if ($conexion->query($sentencia) === TRUE) {
                     	echo "<script language='javascript'>"; 
                             echo "alert('Factura Realizada Corectamente');";
-                            echo "window.location.href='buscarfolio.php';";
+                            echo "window.location.href='vercobros.php';";
                             echo "</script>"; 
 
 
@@ -41,7 +41,7 @@ function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$tid
 
                     		echo "<script language='javascript'>"; 
                             echo "alert('Factura No Realizada');";
-                            echo "window.location.href='buscarfolio.php';";
+                            echo "window.location.href='vercobros.php';";
                             echo "</script>"; 
                     }
 }
