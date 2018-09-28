@@ -76,7 +76,7 @@
                   if(mysqli_num_rows($conexion->query($sql))>0){
                     echo '<span class="label label-success">Realizado</span>';
                   }else{
-                    echo '<span class="label label-warning">Sin realizar</span><button type="button" class="btn btn-success">Realizar</button>';
+                    echo '<span class="label label-warning">Sin realizar</span><a href="Quiz.php?ref='.$reg[0].'"><button type="button" class="btn btn-success">Realizar</button></a>';
                   }
                   echo'</td>
                   <td><a href="altaUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-success">Activar</button></a><a href="inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Denegar</button></a></td>

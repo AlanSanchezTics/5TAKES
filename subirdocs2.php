@@ -1,11 +1,8 @@
 <?php
 include 'conexion.php';
 session_start();
-//$id_usuario=$_SESSION["usuID"];
-$id_usuario=2;
-
+$id_usuario=$_SESSION["usuID"];
 NuevoDoc($_FILES['doc'],$id_usuario);
-
 function NuevoDoc($docn,$usuid)
 {
 include 'conexion.php';
