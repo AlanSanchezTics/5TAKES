@@ -20,13 +20,15 @@
                     $usuEstatus=1;
                 break;
             }
-            $sql = "INSERT INTO tbl_usuarios(`UsuNombre`, `UsuApaterno`, `UsuAmaterno`, `UsuEmail`, `UsuTelefono`, `usuCiudad`, `UsuContraseña`, `UsuTipo`, `UsuEstatus`) VALUES ('{$usuNombre}','{$usuApaterno}','{$usuAmaterno}','{$usuEmail}','{$usuTelefono}','{$usuCiudad}',AES_ENCRYPT('{$usuClave}','FIVETAKES'),{$usuTipo},{$usuEstatus}";
+            $sql = "INSERT INTO tbl_usuarios(UsuNombre, UsuApaterno, UsuAmaterno, UsuEmail, UsuTelefono, usuCiudad, UsuContraseña, UsuTipo, UsuEstatus) VALUES ('{$usuNombre}','{$usuApaterno}','{$usuAmaterno}','{$usuEmail}','{$usuTelefono}','{$usuCiudad}',AES_ENCRYPT('{$usuClave}','FIVETAKES'),{$usuTipo},{$usuEstatus})";
             if(mysqli_query($conexion,$sql) === TRUE){
                 echo "<script language='javascript'>";
                 echo "window.location.href='registrosuccess.php'";
                 echo "</script>";
+            }else{
+                var_dump($sql);
             }
         }
     }
-    NuevoUsuario($_POST["email"],$_POST["Nombre"],$_POST["APPaterno"],$_POST["APMaterno"],$_POST[""],$_POST["pswd"],$_POST["ciudad"],$_POST["tipo"]);
+    NuevoUsuario($_POST["email"],$_POST["Nombre"],$_POST["APPaterno"],$_POST["APMaterno"],$_POST["Telefono"],$_POST["pswd"],$_POST["ciudad"],$_POST["tipo"]);
 ?>
