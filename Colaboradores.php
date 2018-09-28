@@ -17,7 +17,8 @@
   <tr>
     <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
-    <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
+    <a href="#"><?php session_start();
+                echo $_SESSION["usuNombre"]; ?></a>
   <br>
   <a href ="" >Cerrar Sesion</a>
 </div></th>
@@ -50,31 +51,28 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>John Perez</td>
-        <td>john@example.com</td>
-        <td>3221753228</td>
-        <td>Puerto Vallarta</td>
-        <td>
-            <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
-            <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
-        </td>
-        <td><button type="button" class="btn btn-warning">Modificar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>John Perez</td>
-        <td>john@example.com</td>
-        <td>3221753228</td>
-        <td>Puerto Vallarta</td>
-        <td>
-            <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
-            <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
-        </td>
-        <td><button type="button" class="btn btn-warning">Modificar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
-      </tr>
-      
+    <?php
+    include "conexion.php";
+    $sql = "SELECT tbl_usuarios.UsuId, tbl_usuarios.UsuNombre, tbl_usuarios.UsuApaterno, tbl_usuarios.UsuAmaterno, tbl_usuarios.UsuEmail,tbl_usuarios.UsuTelefono,tbl_usuarios.usuCiudad FROM tbl_usuarios WHERE tbl_usuarios.UsuTipo=3 AND UsuEstatus=1";
+    $result = mysqli_query($conexion, $sql);
+    while ($reg = mysqli_fetch_array($result)) {
+      echo '<tr>
+        <th>' . $reg[0] . '</th>
+        <td>' . $reg[1] . ' ' . $reg[2] . ' ' . $reg[3] . '</td>
+        <td>' . $reg[4] . '</td>
+        <td>' . $reg[5] . '</td>
+        <td>'.$reg[6].'</td>
+        <td>';
+        $sql="SELECT * FROM tbl_documentos WHERE usuId={$reg[0]}";
+        $result2 = mysqli_query($conexion,$sql);
+        while($row = mysqli_fetch_array($result2)){
+          echo '<a href="">'.$row[2].'</a><p>Vigencia al: '.$row[4].'</p>';
+        }
+        echo '</td>
+        <td><a href="modDatos.php"><button type="button" class="btn btn-warning">Modificar</button></a><button type="button" class="btn btn-danger">Eliminar</button></td>
+              </tr>';
+    }
+    ?>
     </tbody>
   </table>
 </div>
