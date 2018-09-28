@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>solicitudes</title>
@@ -27,11 +27,11 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li><a href="solicitudes.php" class="selected">Solicitudes</a></li>
-      <li><a href="#">Finanzas</a></li>
+      <li><a href="finanzas.php">Finanzas</a></li>
       <li><a href="proveedores.php">Proveedores</a></li>
       <li><a href="Colaboradores.php">Colaboradores</a></li>
       <li><a href="encuestas.php">Clientes</a></li>
-      <li><a href="#">Facturaci&oacute;n</a></li>
+      <li><a href="facturacion/vercobros.php">Facturaci&oacute;n</a></li>
     </ul>
   </div>
 </nav>
@@ -44,33 +44,47 @@
         <th>Nombre</th>
         <th>Correo</th>
         <th>Telefono</th>
+        <th>Tipo</th>
         <th>Documentos</th>
         <th>Examen</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>John Perez</td>
-        <td>john@example.com</td>
-        <td>3221753228</td>
-        <td>
-            <span class="label label-warning">Pendiente</span><span class="label label-success">Revisado</span><button type="button" class="btn btn-success">Revisar</button>
-        </td>
-        <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>John Perez</td>
-        <td>john@example.com</td>
-        <td>3221753228</td>
-        <td>
-            <span class="label label-warning">Pendiente</span><span class="label label-success">Revisado</span><button type="button" class="btn btn-success">Revisar</button>
-        </td>
-        <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
-      </tr>
+      <?php
+        include "conexion.php";
+        $sql = "SELECT tbl_usuarios.UsuId, tbl_usuarios.UsuNombre, tbl_usuarios.UsuApaterno, tbl_usuarios.UsuAmaterno, tbl_usuarios.UsuEmail,tbl_usuarios.UsuTelefono,tbl_usuarios.UsuTipo FROM tbl_usuarios WHERE tbl_usuarios.UsuEstatus=2";
+        $result = mysqli_query($conexion,$sql);
+        while ($reg = mysqli_fetch_array($result)) {
+          echo '<tr>
+                  <th>'.$reg[0].'</th>
+                  <td>'.$reg[1].' '.$reg[2].' '.$reg[3].'</td>
+                  <td>'.$reg[4].'</td>
+                  <td>'.$reg[5].'</td>
+                  <td>';
+                  switch($reg[6]){
+                    case 2:
+                    echo "Proveedor";
+                    break;
+                    case 3:
+                    echo "Colaborador";
+                    break;
+                  }
+                    echo'</td>
+                  <td><a href="documentos.php?ref='.$reg[0].'"><button type="button" class="btn btn-success" id="revisar" name="'.$reg[0].'">Revisar</button></a></td>
+                  <td>'; 
+                  $sql = "SELECT * FROM tbl_examenes WHERE usuID={$reg[0]}";
+                  if(mysqli_num_rows($conexion->query($sql))>0){
+                    echo '<span class="label label-success">Realizado</span>';
+                  }else{
+                    echo '<span class="label label-warning">Sin realizar</span><button type="button" class="btn btn-success">Realizar</button>';
+                  }
+                  echo'</td>
+                </tr>';
+        }
+      ?>
     </tbody>
   </table>
 </div>
 </body>
+<!---->
 </html>
