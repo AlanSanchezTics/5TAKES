@@ -26,9 +26,6 @@
 <label>Fecha</label>
 <input type="date" name="fecha"></input>
 <br>
-<label>Ciudad</label>
-<input type="text" name="rsocial"></input>
-<br>
 <label>IVA</label>
 <input type="text" name="iva"></input>
 <br>
