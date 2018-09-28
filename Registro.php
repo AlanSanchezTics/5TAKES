@@ -48,6 +48,9 @@
     <input type="text" class="form-control" id="APMaterno" placeholder="Ingresa Apellido Materno" name="APMaterno">
     </div>
     <div class="form-group">
+    <input type="tel" class="form-control" id="telefono" placeholder="Ingresa Telefono" name="Telefono">
+    </div>
+    <div class="form-group">
     <input type="password" class="form-control" id="pwd" placeholder="Ingresa Contraseña" name="pswd">
     </div>
     <div class="form-group">
