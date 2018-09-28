@@ -62,7 +62,7 @@
         <th>Telefono</th>
         <th>Direccion</th>
         <th>Status</th>
-        <th>Options</th>
+        <th>Opciones</th>
       </tr>
     </thead>
     <tbody>
@@ -77,8 +77,8 @@
             <span class="label label-success">Activo</span>
         </td>
         <td>
-          <button type="button" class="btn btn-success">Modificar</button>
-          <button type="button" class="btn btn-warning">Desactivar</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-danger">Desactivar</button>
         </td>
       </tr>
       
@@ -93,8 +93,8 @@
             <span class="label label-success">Activo</span>
         </td>
         <td>
-          <button type="button" class="btn btn-success">Modificar</button>
-          <button type="button" class="btn btn-warning">Desactivar</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-danger">Desactivar</button>
         </td>
       </tr>
       
@@ -109,8 +109,8 @@
             <span class="label label-success">Activo</span>
         </td>
         <td>
-          <button type="button" class="btn btn-success">Modificar</button>
-          <button type="button" class="btn btn-warning">Desactivar</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-danger">Desactivar</button>
         </td>
       </tr>
 
