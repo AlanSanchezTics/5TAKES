@@ -37,7 +37,7 @@
   </div>
 </nav>
 <div class="container">
-  <h2>Solicitudes Pendientes</h2>           
+  <h2>Proveedores</h2>           
   <table class="table table-striped">
     <thead>
       <tr>
@@ -46,6 +46,7 @@
         <th>Correo</th>
         <th>Telefono</th>
         <th>Ciudad</th>
+        <th>Servicio</th>
         <th>Documentos</th>
         <td></td>
       </tr>
@@ -57,6 +58,7 @@
         <td>john@example.com</td>
         <td>3221753228</td>
         <td>Puerto Vallarta</td>
+        <td>construccion</td>
         <td>
             <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
             <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
@@ -69,6 +71,7 @@
         <td>john@example.com</td>
         <td>3221753228</td>
         <td>Puerto Vallarta</td>
+        <td>construccion</td>
         <td>
             <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
             <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
