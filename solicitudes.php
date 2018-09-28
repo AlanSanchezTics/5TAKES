@@ -26,11 +26,11 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><a href="#" class="selected">Solicitudes</a></li>
+      <li><a href="solicitudes.php" class="selected">Solicitudes</a></li>
       <li><a href="#">Finanzas</a></li>
-      <li><a href="#">Proveedores</a></li>
-      <li><a href="#">Colaboradores</a></li>
-      <li><a href="#">Clientes</a></li>
+      <li><a href="proveedores.php">Proveedores</a></li>
+      <li><a href="Colaboradores.php">Colaboradores</a></li>
+      <li><a href="encuestas.php">Clientes</a></li>
       <li><a href="#">Facturaci&oacute;n</a></li>
     </ul>
   </div>
