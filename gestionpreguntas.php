@@ -63,7 +63,7 @@
         </div>
         <div class="modal-body">
                 
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input type="text" id="pregunta" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
 
         </div>
         <div class="modal-footer">
@@ -75,6 +75,13 @@
         </div>
     </div>
     </div>
+
+    <!-- Focus al inpud del modal -->
+    <script>
+        $('#ModalAgregarPregunta').on('shown.bs.modal', function () {
+            $('#pregunta').trigger('focus')
+        })
+    </script>
 
   <table class="table table-hover table-striped">
     <thead>
