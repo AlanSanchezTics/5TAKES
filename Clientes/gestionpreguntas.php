@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>solicitudes</title>
@@ -62,8 +62,10 @@
             </button>
         </div>
         <div class="modal-body">
-                
-            <input type="text" id="pregunta" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+
+            <label>¿</label>
+            <input type="text" id="pregunta" style="width:500px;">
+            <label>?</label>
 
         </div>
         <div class="modal-footer">

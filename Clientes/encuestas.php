@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>solicitudes</title>
@@ -43,14 +43,10 @@
       <h2>Encuestas de Satisfacción</h2>
       </th>
       <th style="text-align:right">
-       <a href="gestionpreguntas.php" class="badge badge-info">Generador de Banco de Preguntas</a>
+       <a href="gestionpreguntas.php" class="badge badge-info" style="background-color: #5DBCD2;">Generador de Banco de Preguntas</a>
       </th>
     </tr>
   </table>
-  <style type="text/css">
-    .badge {
-    background-color: #5DBCD2; }
-  </style>
 
   <table class="table table-hover table-striped">
     <thead>
