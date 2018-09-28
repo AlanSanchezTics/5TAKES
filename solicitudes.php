@@ -70,8 +70,15 @@
                     break;
                   }
                     echo'</td>
-                  <td><a href="documentos.php"><button type="button" class="btn btn-success" id="revisar" name="'.$reg[0].'">Revisar</button></a></td>
-                  <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
+                  <td><a href="documentos.php?ref='.$reg[0].'"><button type="button" class="btn btn-success" id="revisar" name="'.$reg[0].'">Revisar</button></a></td>
+                  <td>'; 
+                  $sql = "SELECT * FROM tbl_examenes WHERE usuID={$reg[0]}";
+                  if(mysqli_num_rows($conexion->query($sql))>0){
+                    echo '<span class="label label-success">Realizado</span>';
+                  }else{
+                    echo '<span class="label label-warning">Sin realizar</span><button type="button" class="btn btn-success">Realizar</button>';
+                  }
+                  echo'</td>
                 </tr>';
         }
       ?>
@@ -79,4 +86,5 @@
   </table>
 </div>
 </body>
+<!---->
 </html>
