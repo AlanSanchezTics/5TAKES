@@ -70,7 +70,7 @@
                     break;
                   }
                     echo'</td>
-                  <td><button type="button" class="btn btn-success" id="revisar" name="'.$reg[0].'">Revisar</button></td>
+                  <td><a href="documentos.php"><button type="button" class="btn btn-success" id="revisar" name="'.$reg[0].'">Revisar</button></a></td>
                   <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
                 </tr>';
         }
