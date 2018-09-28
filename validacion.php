@@ -33,7 +33,7 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
                 $_SESSION["usuID"]=$reg[0];
                 $_SESSION["usuNombre"] = "{$reg[1]} {$reg[2]}";
                     echo "<script language='javascript'>";
-                    echo "window.location.href='dashboard.php'";
+                    echo "window.location.href='solicitudes.php'";
                     echo "</script>";
                     break;
                     case 2:
