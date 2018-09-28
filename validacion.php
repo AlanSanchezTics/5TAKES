@@ -1,6 +1,7 @@
 <?php
 include "./conexion.php";
 $array = array();
+session_start();
     /*$database = $firebase -> getDatabase();
 
     $newPost = $database
@@ -29,6 +30,8 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
                     echo "</script>";
                     break;
                 case 1:
+                $_SESSION["usuID"]=$reg[0];
+                $_SESSION["usuNombre"] = "{$reg[1]} {$reg[2]}";
                     echo "<script language='javascript'>";
                     echo "window.location.href='dashboard.php'";
                     echo "</script>";
