@@ -6,7 +6,7 @@ session_start();
 
 
     $idexam = $_GET['ref'];
-    $sql = "UPDATE tbl_examenes SET examCalif=5, examEstatus=1 WHERE examID = '{$indexam}'";
+    $sql = "UPDATE tbl_examenes SET examCalif=10, examEstatus=1 WHERE examID = '{$indexam}'";
 
     if (mysqli_query($conexion, $sql) === TRUE) {
         echo "<script language='javascript'>";
