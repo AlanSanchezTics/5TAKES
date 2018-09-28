@@ -89,7 +89,7 @@
                         </div>
                     </div>
         </td>
-        <td><a href="ModColForm.php"><button type="button" class="btn btn-warning">Modificar</button></a><a href="inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
+        <td><a href="modDatos.php?usuID='.$reg[0].'"><button type="button" class="btn btn-warning">Modificar</button></a><a href="inactiveUser.php?usuID='.$reg[0].'"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
               </tr>';
     }
     ?>
