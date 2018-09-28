@@ -96,6 +96,9 @@
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td>¿Aun no tienes cuenta? <a href="Registro.php">Registrate ahora</a></td>
+                    </tr>
                 </table>
             </div>
         </form>

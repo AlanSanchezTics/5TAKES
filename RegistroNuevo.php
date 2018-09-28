@@ -28,5 +28,5 @@
             }
         }
     }
-    Nuevafactura($_POST["email"],$_POST["nombre"],$_POST["APPaterno"],$_POST["APMaterno"],$_POST[""],$_POST["pswd"],$_POST["ciudad"],$_POST["tipo"]);
+    NuevoUsuario($_POST["email"],$_POST["Nombre"],$_POST["APPaterno"],$_POST["APMaterno"],$_POST[""],$_POST["pswd"],$_POST["ciudad"],$_POST["tipo"]);
 ?>

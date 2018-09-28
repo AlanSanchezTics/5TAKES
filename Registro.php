@@ -34,7 +34,7 @@
     <div class="form-group">
     <h1 class="text-success" style="text-align:center;">Registro<h1>
     </div>
-    <form class="form-group" action="/action_page.php" >
+    <form class="form-group" action="RegistroNuevo.php" method="POST">
     <div class="form-group">
     <input type="email" class="form-control" id="email" placeholder="Ingresa tu E-Mail" name="email">
     </div>
