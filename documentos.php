@@ -50,15 +50,15 @@
                         </div>
                     </div>
                         </td>
-                        <td><input type="checkbox" onclick="habilitar()" id="validar"> V&aacute;lido</td>
-                        <td><input type="date" id="fecha" disabled></td>
+                        <td><input type="checkbox" onclick="habilitar()" name=validar id="validar"> V&aacute;lido</td>
+                        <td><input type="date" id="fecha" name="fecha" disabled></td>
                     </tr>';
             }
         ?>
     </tbody>
   </table>
     <div style="text-align:right">
-        <button  class="btn btn-success">guardar</button>
+        <a href="solicitudes.php"><button  class="btn btn-success">guardar</button></a>
     </div>
 </div>
 <script>
