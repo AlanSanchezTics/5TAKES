@@ -1,6 +1,7 @@
 <!<!DOCTYPE html>
 <html>
 <head>
+  <title>solicitudes</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -36,7 +37,7 @@
   </div>
 </nav>
 <div class="container">
-  <h2>Servicios Pendientes</h2>           
+  <h2>Solicitudes Pendientes</h2>           
   <table class="table table-hover">
     <thead>
       <tr>
