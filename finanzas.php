@@ -20,12 +20,8 @@
   <tr>
     <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
-<<<<<<< HEAD
-    <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
-=======
     <a href="#"><?php session_start();
                 echo $_SESSION["usuNombre"]; ?></a>
->>>>>>> f2cf750afe36ac523b8c016b69bb3a50c1df1b0e
   <br>
   <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
