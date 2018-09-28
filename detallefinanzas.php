@@ -23,7 +23,7 @@
     <a href="#"><?php session_start();
                 echo $_SESSION["usuNombre"]; ?></a>
   <br>
-  <a href ="" >Cerrar Sesion</a>
+  <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
   </tr>
 </table>

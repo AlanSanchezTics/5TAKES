@@ -23,7 +23,7 @@
     <a href="#"><?php session_start();
                 echo $_SESSION["usuNombre"]; ?></a>
   <br>
-  <a href ="" >Cerrar Sesion</a>
+  <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
   </tr>
 </table>
@@ -41,10 +41,11 @@
 </nav>
 <div class="container">
   <h2>Finanzas</h2>
+  <form method="GET" action="finanzas.php">
   <div class="col-sm-6 col-sm-offset-3">
             <div id="imaginary_container"> 
                 <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Search" >
+                    <input type="text" class="form-control" name="ref"  placeholder="Correo Electronico" >
                     <span class="input-group-addon">
                         <button type="submit">
                             <span class="glyphicon glyphicon-search"></span>
@@ -52,38 +53,44 @@
                     </span>
                 </div>
             </div>
-    </div> <br><br>   
-    <h3>Resultados de b&uacute;squeda</h3>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Nombre</th>
-        <th>Total</th>
-        <th>Comision</th>
-        <th>Ganancia</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John Perez</td>
-        <td>$7,500.00</td>
-        <td>$6,000.00</td>
-        <td>$1,500.00</td>
-        <td><a href="detallefinanzas.php">Ver detalles</a></td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>John Perez</td>
-        <td>$7,500.00</td>
-        <td>$6,000.00</td>
-        <td>$1,500.00</td>
-        <td><a href="detallefinanzas.php">Ver detalles</a></td>
-    </tr>  
-    </tbody>
-  </table>
+    </div> </form> <br><br>
+    <?php
+      include "conexion.php";
+      if(isset($_GET["ref"])){
+        echo '<h3>Resultados de b&uacute;squeda</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nombre</th>
+              <th>Total</th>
+              <th>Comision</th>
+              <th>Ganancia</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>';
+      $sql = "SELECT colId FROM tbl_asignacionprov,tbl_usuarios WHERE tbl_asignacionprov.ProvId = tbl_usuarios.UsuId AND tbl_usuarios.UsuEmail = '{$_GET["ref"]}'";
+      $result = mysqli_query($conexion,$sql);
+      if($reg = mysqli_fetch_array($result)){
+      $sql="SELECT tbl_usuarios.UsuId, tbl_usuarios.UsuNombre, tbl_usuarios.UsuApaterno, tbl_usuarios.UsuAmaterno, SUM(tbl_trabajosrealizados.Total),(SUM(tbl_trabajosrealizados.Total)*0.30),(SUM(tbl_trabajosrealizados.Total)/1.30) FROM tbl_trabajosrealizados, tbl_usuarios WHERE tbl_trabajosrealizados.ColId = tbl_usuarios.UsuId AND tbl_trabajosrealizados.ColId={$reg[0]}";
+        $result = mysqli_query($conexion,$sql);
+        while($reg = mysqli_fetch_array($result)){
+          echo '<tr>
+                  <th>'.$reg[0].'</th>
+                  <td>'.$reg[1].' '.$reg[2].' '.$reg[3].'</td>
+                  <td>$'.$reg[4].'</td>
+                  <td>$'.$reg[5].'</td>
+                  <td>$'.$reg[6].'</td>
+                  <td><a href="detallefinanzas.php?ref='.$reg[0].'">Ver detalles</a></td>
+                </tr>';
+        }
+      }    
+      echo '</tbody>
+        </table>';
+      }
+    ?>   
+    <!---->
 </div>
 
 </body>

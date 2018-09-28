@@ -25,11 +25,11 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li><a href="../solicitudes.php">Solicitudes</a></li>
-      <li><a href="#">Finanzas</a></li>
+      <li><a href="../finanzas.php">Finanzas</a></li>
       <li><a href="../proveedores.php">Proveedores</a></li>
       <li><a href="../Colaboradores.php">Colaboradores</a></li>
-      <li><a href="../encuestas.php">Clientes</a></li>
-      <li><a href="../facturacion/vercobros.php">Facturaci&oacute;n</a></li>
+      <li><a href="../Clientes/encuestas.php">Clientes</a></li>
+      <li><a href="../facturacion/vercobros.php" class="selected">Facturaci&oacute;n</a></li>
     </ul>
   </div>
 </nav>
