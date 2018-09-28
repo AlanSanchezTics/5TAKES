@@ -97,7 +97,7 @@
     </table>
 
         <div  style="text-align:right">
-            <button type="submit" class="btn btn-success">Enviar</button>
+            <a href="quizvalidacion.php?ref=<?php echo $_GET['ref'];?>"><button type="submit" class="btn btn-success">Enviar</button>
         </div> 
         <form>      
     </div>
