@@ -47,38 +47,10 @@
                 </div>
             </div>
         </td>
-        <td><input type="checkbox" onclick="habilitar()"> V&aacute;lido</td>
-        <td><input type="date" id="fecha"></td>
+        <td><input type="checkbox" onclick="habilitar()" id="validar"> V&aacute;lido</td>
+        <td><input type="date" id="fecha" disabled></td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>
-            <a data-toggle="modal" data-target="#myModal">Permiso-para-laborar</a>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    
-                    </div>
-                    <div class="modal-body">
-                    <center><img src="logo.png" width="90%" ></center>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-                
-                </div>
-            </div>
-        </td>
-        <td><input type="checkbox"> V&aacute;lido</td>
-        <td><input type="date" id="fecha"></td>
-    </tr>
+    
     </tbody>
   </table>
     <div style="text-align:right">
@@ -87,7 +59,14 @@
 </div>
 <script>
 function habilitar() {
-    document.getElementById("fecha").disabled = true;
+    if(document.getElementById("validar").checked){
+        document.getElementById("fecha").disabled = false;
+    }
+    else{
+        document.getElementById("fecha").disabled = true;
+    }
+
+    
 }
 </script>
 </body>
