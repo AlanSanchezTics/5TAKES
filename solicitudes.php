@@ -9,11 +9,38 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table>
+  <tr>
+    <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
+    <th><div class = "lbl">
+<label >Usuario: </label>
+  <label>Default</label>
+  <br>
+  <a href ="" >Cerrar Sesion</a>
+</div></th>
+  </tr>
+</table>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="#">Solicitudes</a></li>
+      <li><a href="#">Finanzas</a></li>
+      <li><a href="#">Proveedores</a></li>
+      <li><a href="#">Colaboradores</a></li>
+      <li><a href="#">Clientes</a></li>
+      <li><a href="#">Facturaci&oacute;n</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
   <h2>Servicios Pendientes</h2>           
   <table class="table table-hover">
     <thead>
       <tr>
+        <th>No.</th>
         <th>Nombre</th>
         <th>Correo</th>
         <th>Telefono</th>
@@ -23,9 +50,10 @@
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
+        <td>1</td>
+        <td>John Perez</td>
         <td>john@example.com</td>
+        <td>3221753228</td>
         <td>
             <span class="label label-warning">Pendiente</span><span class="label label-success">Revisado</span><button type="button" class="btn btn-success">Revisar</button>
         </td>
