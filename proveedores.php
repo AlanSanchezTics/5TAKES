@@ -37,8 +37,8 @@
   </div>
 </nav>
 <div class="container">
-  <h2>Solicitudes Pendientes</h2>           
-  <table class="table table-hover">
+  <h2>Proveedores</h2>           
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>No.</th>
@@ -46,22 +46,38 @@
         <th>Correo</th>
         <th>Telefono</th>
         <th>Ciudad</th>
+        <th>Servicio</th>
         <th>Documentos</th>
-        <t></
+        <td></td>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>2</td>
+        <td>John Perez</td>
+        <td>john@example.com</td>
+        <td>3221753228</td>
+        <td>Puerto Vallarta</td>
+        <td>construccion</td>
+        <td>
+            <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
+            <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
+        </td>
+        <td><button type="button" class="btn btn-success">Modificar</button><button type="button" class="btn btn-warning">Eliminar</button></td>
+      </tr>
       <tr>
         <td>1</td>
         <td>John Perez</td>
         <td>john@example.com</td>
         <td>3221753228</td>
+        <td>Puerto Vallarta</td>
+        <td>construccion</td>
         <td>
-            <span class="label label-warning">Pendiente</span><span class="label label-success">Revisado</span><button type="button" class="btn btn-success">Revisar</button>
+            <a href="">Permiso</a><p>Vigencia al: 3/12/2018</p>
+            <a href="">Certificaci&oacute;n</a><p>Vigencia al: 16/11/2018</p>
         </td>
-        <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
+        <td><button type="button" class="btn btn-success">Modificar</button><button type="button" class="btn btn-warning">Eliminar</button></td>
       </tr>
-      
       
     </tbody>
   </table>

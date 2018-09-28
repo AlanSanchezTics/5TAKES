@@ -37,7 +37,7 @@
 </nav>
 <div class="container">
   <h2>Solicitudes Pendientes</h2>           
-  <table class="table table-hover">
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>No.</th>
@@ -59,8 +59,16 @@
         </td>
         <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
       </tr>
-      
-      
+      <tr>
+        <td>1</td>
+        <td>John Perez</td>
+        <td>john@example.com</td>
+        <td>3221753228</td>
+        <td>
+            <span class="label label-warning">Pendiente</span><span class="label label-success">Revisado</span><button type="button" class="btn btn-success">Revisar</button>
+        </td>
+        <td><span class="label label-warning">Sin realizar</span><span class="label label-success">Realizado</span><button type="button" class="btn btn-success">Realizar</button></td>
+      </tr>
     </tbody>
   </table>
 </div>
