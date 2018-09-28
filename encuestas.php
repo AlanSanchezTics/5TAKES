@@ -43,11 +43,15 @@
       <th>
       <h2>Encuestas de Satisfacción</h2>
       </th>
-      <th>
+      <th style="text-align:right">
        <a href="#" class="badge badge-info">Generador de Banco de Preguntas</a>
       </th>
     </tr>
   </table>
+  <style type="text/css">
+    .badge {
+    background-color: #5DBCD2; }
+  </style>
 
   <table class="table table-hover table-striped">
     <thead>
