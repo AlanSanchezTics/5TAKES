@@ -1,13 +1,12 @@
 <?php
-
-NuevoFolio( $_POST['folio']);
-
+session_start();
+$_SESSION['tid']=$_POST['folio'];
+NuevoFolio($_POST['folio']);
 function NuevoFolio($folio)
 {
 	include "../conexion.php";
 	$sentencia="SELECT *FROM tbl_facturacion WHERE tid=".$folio." and facturaexiste=1";	
         $user = mysqli_num_rows(mysqli_query($conexion,$sentencia));
-
         if ($user>0)
         {
             echo "<script language='javascript'>"; 

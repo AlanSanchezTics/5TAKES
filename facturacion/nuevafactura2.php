@@ -1,7 +1,10 @@
 <?php
 include '../conexion.php';
-
-Nuevofactura($_POST['rfc'], $_POST['monto'], $_POST['rsocial'],$_POST['tpago'],$_POST['direccion'],$_POST['ciudad'],$_POST['fecha'],$_POST['rsocial'],$_POST['iva'],$_POST['tid']);
+session_start();
+$_POST['tid']=$_SESSION['tid'];
+var_dump($_POST['tid']);
+die();
+Nuevafactura($_POST['rfc'], $_POST['monto'], $_POST['rsocial'],$_POST['tpago'],$_POST['direccion'],$_POST['ciudad'],$_POST['fecha'],$_POST['rsocial'],$_POST['iva'],$_POST['tid']);
 
 function Nuevafactura($rfc,$monto,$rsocial,$tpago,$direccion,$ciudad,$fecha,$rsocial,$iva,$tid)
 {
