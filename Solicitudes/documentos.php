@@ -22,7 +22,7 @@
     </thead>
     <tbody>
         <?php
-            include "conexion.php";
+            include "../conexion.php";
             $sql="SELECT * FROM tbl_documentos WHERE usuId={$_GET['ref']}";
             $result = mysqli_query($conexion,$sql);
             while($reg = mysqli_fetch_array($result)){
