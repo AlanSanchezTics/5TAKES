@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SubirDocs</title>
+  <title>Proveedor</title>
   <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>5TAKES | Sube tus documentos.</title>
@@ -13,20 +13,18 @@
 <body>
 </head>
 <body>
-<table>
-  <tr>
-    <th>
-        <img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
-    <th>
-    <div class = "lbl" style="text-align:right">
-        <label >Usuario: </label>
-        <label>Default</label>
-        <br>
-        <a href ="" >Cerrar Sesion</a>
+
+<div class="row">
+    <div class="col">
+        <img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal">
     </div>
-</th>
-  </tr>
-</table>
+    <div class="col" style="text-align:right">
+    <div class="lbl">   
+            <a href ="#" >Cerrar Sesion</a>
+    </div>
+    </div>
+</div>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
@@ -34,6 +32,7 @@
     </ul>
   </div>
 </nav>
+
     <div class="container">
     
     <div class="input-group">
@@ -41,11 +40,11 @@
     <input type="file" class="custom-file-input" id="inputGroupFile04">
     <label class="custom-file-label" for="inputGroupFile04">Carta de antecedentes penales</label>
     </div>
-    <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button">Subir</button>
     </div>
-    </div>
-        
+    <br>
+    <div  style="text-align:center">
+    <button type="button" class="btn btn-success">Subir</button>
+    </div>        
     </div>
 </body>
 </html>
