@@ -15,11 +15,11 @@
 
 <table>
   <tr>
-    <th><img src="logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
+    <th><img src="../logo.png" alt="Smiley face" width="64" height="64" class="logoprincipal"></th>
     <th><div class = "lbl">
   <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
   <br>
-  <a href ="" >Cerrar Sesion</a>
+  <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
   </tr>
 </table>
@@ -61,19 +61,20 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
+        <form method="POST" action="altapregunta.php">
         <div class="modal-body">
-
             <label>¿</label>
-            <input type="text" id="pregunta" style="width:500px;">
+            <input type="text" id="pregunta" name="pregunta" style="width:500px;">
             <label>?</label>
-
+          </form>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            <a href="http://localhost:8080/5TAKES/gestionpreguntas.php">
-                <button type="button" class="btn btn-success">Guardar</button>
+            <a href="gestionpreguntas.php">  
+            <button type="button" class="btn btn-success">Guardar</button>
             </a>
         </div>
+</form>
         </div>
     </div>
     </div>

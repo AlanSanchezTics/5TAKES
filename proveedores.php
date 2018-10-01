@@ -19,7 +19,7 @@
     <th><div class = "lbl">
     <a href="#"><?php session_start(); echo $_SESSION["usuNombre"];?></a>
   <br>
-  <a href ="" >Cerrar Sesion</a>
+  <a href ="logout.php" >Cerrar Sesion</a>
 </div></th>
   </tr>
 </table>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
         </td>
-        <td><a href="modDatos.php"><button type="button" class="btn btn-warning">Modificar</button></a><button type="button" class="btn btn-danger">Eliminar</button></td>
+        <td><a href="modDatos.php?usuID='.$reg[0].'"><button type="button" class="btn btn-warning">Modificar</button></a><button type="button" class="btn btn-danger">Eliminar</button></td>
               </tr>';
     }
     ?>
